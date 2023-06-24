@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="lvalenzuelaExamen.Registro">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label 
+                    x:Name="lblUsuario" 
+                    TextColor="Red"
+                    FontSize="16"
+                    HorizontalTextAlignment="Center"    
+                />
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Label 
+                    Text="FECHA" 
+                    FontSize="20" 
+                    Grid.Row="0" 
+                    Grid.Column="0"
+                 />
+                <DatePicker x:Name="DatePickerUno" DateSelected="DatePicker_DateSelected" Grid.Column="1" Grid.Row="0"/>
+                <Label x:Name="DatePicked" HorizontalOptions="Center" FontSize="30" TextColor="Black" Grid.Column="1" Grid.Row="0" ></Label>
+
+                <Label 
+                    Text="PAIS" 
+                    FontSize="20" 
+                    Grid.Row="1" 
+                    Grid.Column="0"
+                 />
+                 <Picker
+                    x:Name="pkPais"
+                    Grid.Row="1" 
+                    Grid.Column="1"
+                    SelectedIndexChanged="pkPais_SelectedIndexChanged"
+                >
+                    <Picker.Items>
+                        <x:String>Ecuador</x:String>
+                        <x:String>Colombia</x:String>
+                        <x:String>Venezuela</x:String>
+                        <x:String>Honduras</x:String>
+                    </Picker.Items>
+                </Picker>
+                <Label 
+                    Text="CIUDAD" 
+                    FontSize="20" 
+                    Grid.Row="2" 
+                    Grid.Column="0"
+                 />
+                <Picker
+                    x:Name="pkCiudad"
+                    Grid.Row="2" 
+                    Grid.Column="1"
+                    SelectedIndexChanged="pkCiudad_SelectedIndexChanged"
+                >
+                    <Picker.Items>
+                        <x:String>QUITO</x:String>
+                        <x:String>LATACUNGA</x:String>
+                        <x:String>CARCHI</x:String>
+                        <x:String>AMBATO</x:String>
+                    </Picker.Items>
+                </Picker>
+
+                <Label 
+                    Text="MONTO INICIAL"
+                    FontSize="24"
+                    HorizontalTextAlignment="Center"    
+                    Grid.Row="3" 
+                    Grid.Column="0"
+                />
+                <Entry
+                    x:Name="txtMontoInicialLenin"
+                    Placeholder="Monto Inicial"
+                    Keyboard="Numeric"
+                    TextChanged="txtMontoInicialLenin_TextChanged"
+                    Grid.Row="3" 
+                    Grid.Column="1"
+                />
+                <Label 
+                    Text="PAGO MENSUAL"
+                    FontSize="24"
+                    HorizontalTextAlignment="Center"    
+                    Grid.Row="4" 
+                    Grid.Column="0"
+                />
+                <Entry
+                    x:Name="txtpagoMensual"
+                    Placeholder="PagoMensual"
+                    IsEnabled="False"
+                    Keyboard="Numeric"
+                    Grid.Row="4" 
+                    Grid.Column="1"
+                />
+            </Grid>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                
+                <Label 
+                    Text="Nombre"
+                    FontSize="24"
+                    HorizontalTextAlignment="Center"    
+                    Grid.Row="0" 
+                    Grid.Column="0"
+                />
+                <Label 
+                    Text="Apellido"
+                    FontSize="24"
+                    HorizontalTextAlignment="Center"    
+                    Grid.Row="0" 
+                    Grid.Column="1"
+                />
+                <Label 
+                    Text="Edad"
+                    FontSize="24"
+                    HorizontalTextAlignment="Center"    
+                    Grid.Row="0" 
+                    Grid.Column="2"
+                />
+                <Entry
+                    x:Name="txtNombre"
+                    Placeholder="Nombre"
+                    Grid.Row="1" 
+                    Grid.Column="0"
+                />
+
+                <Entry
+                    x:Name="txtApellido"
+                    Placeholder="Apellido"
+                    Grid.Row="1" 
+                    Grid.Column="1"
+                />
+
+                <Entry
+                    x:Name="txtEdad"
+                    Placeholder="Edad"
+                    Grid.Row="1" 
+                    Grid.Column="2"
+                />
+            </Grid>
+
+            <Button
+                x:Name="btnCalcular"
+                Text="PAGO MENSUAL"
+                Clicked="btnCalcular_Clicked"
+            />
+            <Button
+                x:Name="btnResumen"
+                Text="RESUMEN"
+                Clicked="btnResumen_Clicked"
+            />
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

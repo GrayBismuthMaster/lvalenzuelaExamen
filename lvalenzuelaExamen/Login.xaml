@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="lvalenzuelaExamen.Login"
+             NavigationPage.HasNavigationBar="False"
+             >
+    <ContentPage.Content>
+        <StackLayout
+            VerticalOptions="Center"
+        >
+            <Label 
+                Text="Examen Parcial 1"
+                HorizontalTextAlignment="Center"
+                FontSize="24"
+                TextColor="Black"
+             />
+            <Image
+                Source="https://revista.uisrael.edu.ec/images/uisrael.png"
+                WidthRequest="100"
+                HeightRequest="100"
+            />
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Label 
+                    Text="Usuario" 
+                    FontSize="20" 
+                    Grid.Row="0" 
+                    Grid.Column="0"
+                 />
+                <Label 
+                    Text="Contraseña" 
+                    FontSize="20" 
+                    Grid.Row="1" 
+                    Grid.Column="0"
+                />
+                <Button
+                    x:Name="btnInicio"
+                    Text="Iniciar Sesión"
+                    Clicked="btnInicio_Clicked"
+                    Grid.Row="2"
+                    Grid.Column="0"
+                    HorizontalOptions="CenterAndExpand"
+                />
+                <Entry 
+                    x:Name="txtUsuario"
+                    Placeholder="Ingrese el usuario"
+                    Grid.Row="0"
+                    Grid.Column="1"
+                />
+                <Entry 
+                    x:Name="txtContrasenia"
+                    Placeholder="Ingrese la contraseña"
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    IsPassword="True"
+                />
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
